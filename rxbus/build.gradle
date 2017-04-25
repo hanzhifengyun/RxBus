@@ -1,0 +1,40 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'//添加
+
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.0"
+    resourcePrefix "rxbus__"    //这个随便填
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+    }
+
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    //RxJava
+    compile "io.reactivex.rxjava2:rxjava:$rootProject.RxJavaVersion"
+    compile "io.reactivex.rxjava2:rxandroid:$rootProject.RxAndroidVersion"
+}
+//添加
+publish {
+    userOrg = 'hanzhifengyun'//bintray.com用户名
+    groupId = 'com.hanzhifengyun'//jcenter上的路径
+    artifactId = 'rxbus'//项目名称
+    publishVersion = '1.0.0'//版本号
+    desc = 'RxBus for Android'//描述，不重要
+    website = 'https://github.com/hanzhifengyun/RxBus'
+}
