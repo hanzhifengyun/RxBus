@@ -1,6 +1,20 @@
 # RxBus
 RxBus for Android
 
+## Dependency
+
+###Maven 
+	
+		<dependency>
+		  <groupId>com.hanzhifengyun</groupId>
+		  <artifactId>rxbus</artifactId>
+		  <version>1.0.0</version>
+		  <type>pom</type>
+		</dependency>
+		
+###Gradle 
+		compile 'com.hanzhifengyun:rxbus:1.0.0'
+###Use
 
 	 @Override
     protected void onCreate(Bundle savedInstanceState) {
