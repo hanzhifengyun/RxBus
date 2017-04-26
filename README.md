@@ -13,7 +13,9 @@ RxBus for Android
 		</dependency>
 		
 ###Gradle 
+
 		compile 'com.hanzhifengyun:rxbus:1.0.0'
+		
 ###Use
 
 	 @Override
